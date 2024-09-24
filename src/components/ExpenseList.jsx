@@ -1,10 +1,13 @@
 import React from 'react';
 import { useExpenses } from '../context/ExpenseContext';
+import '../App.css';
 
 const ExpenseList = () => {
   const { expenses, removeExpense } = useExpenses();
 
   return (
+    <div className="expense-list">
+
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Expense List</h2>
       {expenses.length === 0 ? (
@@ -35,6 +38,7 @@ const ExpenseList = () => {
           ))}
         </div>
       )}
+    </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement } from 'chart.js';
 import { useExpenses } from '../context/ExpenseContext';
+import '../App.css';
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement);
 
@@ -45,6 +46,8 @@ const ReportChart = () => {
   };
 
   return (
+    <div className="report-chart">
+
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-xl mx-auto bg-white shadow-lg rounded-lg p-6">
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Expense Report</h2>
@@ -52,6 +55,7 @@ const ReportChart = () => {
           <Pie data={data} />
         </div>
       </div>
+    </div>
     </div>
   );
 };

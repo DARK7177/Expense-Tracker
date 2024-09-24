@@ -1,3 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Default Light Mode */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  input {
+    color: black;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Button Styling */
+  .toggle-btn {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #ccc;
+  }
+  
+  /* For dark mode button styling */
+  body.dark-mode .toggle-btn {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .toggle-btn:hover {
+    background-color: #555;
+  }
+  
+
+  /* App.css (adding dark mode styles for ExpenseForm) */
+
+body.dark-mode .expense-form {
+    background-color: #2c2c2c; /* Dark background */
+    color: white;              /* White text */
+    border-color: #444;        /* Darker borders */
+  }
+  
+  body.dark-mode .expense-form input,
+  body.dark-mode .expense-form select {
+    background-color: #444;
+    color: white;
+    border-color: #555;
+  }
+
+  body.dark-mode .expense-list {
+    background-color: #2c2c2c; /* Dark background */
+    color: white;              /* White text */
+    border-color: #444;        /* Darker borders */
+  }
+  
+  body.dark-mode .expense-list input,
+  body.dark-mode .expense-list select {
+    background-color: #444;
+    color: white;
+    border-color: #555;
+  }
+
+  body.dark-mode .report-chart {
+    background-color: #2c2c2c; /* Dark background */
+    color: white;              /* White text */
+    border-color: #444;        /* Darker borders */
+  }
+  
+  body.dark-mode .report-chart input,
+  body.dark-mode .report-chart select {
+    background-color: #444;
+    color: white;
+    border-color: #555;
+  }
+
+  body.dark-mode input, body.dark-mode select {
+    background-color: #333;
+    color: white;
+    border-color: #444;
+  }
+  
+  button.toggle-btn {
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }

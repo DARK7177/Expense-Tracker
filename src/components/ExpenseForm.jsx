@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useExpenses } from '../context/ExpenseContext';
+import '../App.css';
+
 
 const ExpenseForm = () => {
   const { addExpense } = useExpenses();
@@ -25,7 +27,9 @@ const ExpenseForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <div className="expense-form">
+
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg" >
       <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Add New Expense</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         
@@ -86,6 +90,7 @@ const ExpenseForm = () => {
           </button>
         </div>
       </form>
+    </div>
     </div>
   );
 };
